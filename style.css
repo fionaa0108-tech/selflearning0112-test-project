@@ -1,0 +1,137 @@
+:root {
+  color-scheme: dark;
+  --bg: #0c1117;
+  --surface: #141b24;
+  --surface-strong: #1c2531;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #4cc9f0;
+  --accent-strong: #5ad6ff;
+  --border: rgba(76, 201, 240, 0.2);
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #192331 0%, #0c1117 55%, #070b10 100%);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--text);
+}
+
+.app {
+  width: min(520px, 92vw);
+  display: grid;
+  gap: 24px;
+}
+
+.app__header {
+  text-align: center;
+}
+
+.app__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.app__header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 36px);
+}
+
+.app__sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.card {
+  background: linear-gradient(145deg, rgba(20, 27, 36, 0.95), rgba(12, 17, 23, 0.95));
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 45px -30px var(--shadow);
+  display: grid;
+  gap: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+input,
+select {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: var(--surface-strong);
+  color: var(--text);
+  font-size: 16px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.18);
+}
+
+.btn {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  color: #04131b;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px -18px var(--accent);
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: rgba(12, 17, 23, 0.7);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.result__label {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.result__value {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 22px;
+  }
+}

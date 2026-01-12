@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>简洁计算器</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <p class="app__eyebrow">Simple Calculator</p>
+        <h1>简洁计算器</h1>
+        <p class="app__sub">输入两个数字，选择运算，立即得到结果。</p>
+      </header>
+
+      <section class="card">
+        <div class="field">
+          <label for="numA">数字 A</label>
+          <input id="numA" type="number" inputmode="decimal" placeholder="例如 12.5" />
+        </div>
+
+        <div class="field">
+          <label for="operation">运算</label>
+          <select id="operation">
+            <option value="add">加</option>
+            <option value="sub">减</option>
+            <option value="mul">乘</option>
+            <option value="div">除</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="numB">数字 B</label>
+          <input id="numB" type="number" inputmode="decimal" placeholder="例如 3" />
+        </div>
+
+        <button id="calcBtn" class="btn" type="button">计算</button>
+
+        <div class="result" aria-live="polite">
+          <span class="result__label">结果</span>
+          <span id="resultValue" class="result__value">-</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
